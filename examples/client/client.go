@@ -6,6 +6,7 @@ import (
 	"os"
 )
 
+//SendMailArg argument to Mail.Send function
 type SendMailArg struct {
 	Recepient string
 	Body      []byte
@@ -30,6 +31,8 @@ func main() {
 			panic("error ")
 		}
 		fmt.Printf("Result is %d", result)
+	} else {
+		fmt.Printf("Error during rpc.Dial execution: %v ", err)
 	}
 
 }
